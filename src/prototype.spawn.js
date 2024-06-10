@@ -72,8 +72,10 @@ StructureSpawn.prototype.spawnCreepsIfNecessary =
                     }
                 }
                 // if no claim order was found, check other roles
-                else if (this.memory.hasOwnProperty(this.memory.minCreeps) && this.memory.hasOwnProperty(this.memory.minCreeps[role])
-                         && numberOfCreeps[role] < this.memory.minCreeps[role]) {
+                //else if (this.memory.hasOwnProperty(this.memory.minCreeps) && this.memory.hasOwnProperty(this.memory.minCreeps[role])
+                //         && numberOfCreeps[role] < this.memory.minCreeps[role]) {
+                else if (this.memory.minCreeps && this.memory.minCreeps[role]
+                    && numberOfCreeps[role] < this.memory.minCreeps[role]) {
                     if (role == 'lorry') {
                         name = this.createLorry(150);
                     }

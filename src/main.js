@@ -28,6 +28,8 @@ module.exports.loop = function() {
 
     // for each spawn
     for (let spawnName in Game.spawns) {
+        // ToDo remover logo que corrigir o memory.boot
+        Game.spawns[spawnName].memory.minCreeps = {"builder": 2, "upgrader": 1, "lorry": 1 };
         // run spawn logic
         Game.spawns[spawnName].spawnCreepsIfNecessary();
     }
